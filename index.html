@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub User Finder & Repository Explorer</title>
+     <meta name="description"
+        content="Find GitHub users by username, explore developer profiles, view followers and public repositories, and discover repository stars and programming languages.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/github-logo1.png">
+    <!-- Open Graph metadata -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="GitHub User & Repository Finder">
+    <meta property="og:description" content="Search GitHub users, explore developer profiles and discover public repositories.">
+   <meta property="og:url" content="https://github-user-repository-explorer.vercel.app/">
+   <meta property="og:image" content="https://github-user-repository-explorer.vercel.app/images/og-image.png">
+
+   <link rel="canonical" href="https://github-user-repository-explorer.vercel.app/">
+    
+</head>
+<body>
+    <div class="app-container">
+   <header class="app-header">
+    <h1>GitHub Explorer</h1>
+    <p> Discover developers, explore GitHub profiles,
+        and find repositories.</p>
+    </header>
+<main class="main-container">
+    <section class="search-section">
+        <form id="searchForm">
+        <input type="text" id="searchInput" class="search-input" placeholder="Enter GitHub username"autocomplete="off">
+        <button id="searchButton" type="submit">Search</button>
+        </form>
+    </section>
+    <div class="content-layout">
+    <section id="resultsSection" class="results-section">
+        <h2 class="results_heading">Results</h2>
+        <div id="loadingMessage" hidden>
+        <div class="spinner"></div>
+        <p>Searching GitHub users...</p>
+        </div>
+        <div id="users-list"></div>
+        
+        
+    </section>
+    <div class="profile-column">
+    <section id="userProfile" class="user-profile">
+        <h2 class="results_heading">User Profile</h2>
+        <div id="profileDetails"></div>
+    </section>
+    <section id="repoSection" class="repo-section">
+        <h2 class="results_heading">Repositories</h2>
+        <div id="repoList"></div>
+    </section>
+    </div>
+    </div>
+</main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
